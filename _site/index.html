@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="W 的生活空间，收藏成长的片段，记录每一次向前。">
+  <title>W 的生活空间 · 认真生活，慢慢记录</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="media.js" defer></script>
+  <script src="viewer.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#home" aria-label="W 的生活空间首页"><span class="brand-mark">w<span>·</span></span><span class="brand-name">生活，自有节奏<span>A LITTLE SPACE FOR MYSELF</span></span></a>
+    <nav aria-label="主导航">
+      <a href="#home" data-nav="home">首页</a>
+      <a href="#spaces" data-nav="spaces">我的空间</a>
+    </nav>
+    <span class="header-note"><i></i>慢慢来，也在向前</span>
+  </header>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <section id="home-view" class="view">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> W’S PERSONAL JOURNAL</p>
+          <h1>认真生活，<br>慢慢<span class="serif-accent">成为自己。</span></h1>
+          <p class="hero-description">给生活留一个小小的角落。<br>收藏成长的片段，也记录每一次流汗的自己。</p>
+          <a class="primary-button" href="#spaces">逛逛我的空间 <span aria-hidden="true">↗</span></a>
+          <div class="hero-footnote"><span class="small-sun" aria-hidden="true">☀</span><span>不必赶路，感受路。<small>EVERY LITTLE STEP COUNTS.</small></span></div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/landscape.svg" alt="温暖日光下，通往远方山林的一条小路" width="720" height="660">
+          <span class="art-coordinate">LIFE IS A JOURNEY, NOT A RACE.</span>
+          <div class="floating-note"><span class="note-star" aria-hidden="true">✳</span><span>把日子，过成喜欢的样子。<small>a little better, day by day</small></span></div>
+          <span class="art-index">01 — THE EVERYDAY</span>
+        </div>
+      </div>
+
+      <div class="closing-note"><span aria-hidden="true">✳</span><p>生活没有标准答案，<em>我的记录，就是我的答案。</em></p><span class="eyebrow">MAKE ROOM FOR WHAT MATTERS.</span></div>
+    </section>
+
+      <section class="spaces-section view" id="spaces-view" hidden aria-labelledby="spaces-heading">
+        <a class="back-link" href="#home">← 返回首页</a>
+        <div class="section-heading"><div><p class="eyebrow">TWO SPACES, ONE ME</p><h1 id="spaces-heading">我的两个小世界<span>不同的记录，同样的热爱。</span></h1></div><span class="section-number">（ 01 — 02 ）</span></div>
+        <div class="space-grid">
+          <a class="space-card growth-card" href="#growth">
+            <div class="space-art growth-art"><img src="assets/growth.svg" alt="书本、咖啡与窗外的绿意" width="680" height="340"><span class="media-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg>视频手记</span><span class="art-caption">GROW A LITTLE, EVERY DAY.</span></div>
+            <div class="space-info"><div><p class="eyebrow">01 / PERSONAL GROWTH</p><h3>w的提升空间</h3><p>把努力的过程，留在时光里。</p></div><span class="circle-arrow" aria-hidden="true">↗</span></div>
+            <div class="space-bottom"><span><span data-count="videos">0</span> 个成长片段</span><span>进入空间 <span aria-hidden="true">→</span></span></div>
+          </a>
+          <a class="space-card fitness-card" href="#fitness">
+            <div class="space-art fitness-art"><img src="assets/fitness.svg" alt="阳光下的健身垫、哑铃与水杯" width="680" height="340"><span class="media-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m5 17 5-5 4 4 3-3 3 3"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>运动相册</span><span class="art-caption">FEEL STRONG. FEEL ALIVE.</span></div>
+            <div class="space-info"><div><p class="eyebrow">02 / FITNESS & WELLNESS</p><h3>w的健身空间</h3><p>每一次流汗，都有自己的光。</p></div><span class="circle-arrow" aria-hidden="true">↗</span></div>
+            <div class="space-bottom"><span><span data-count="photos">0</span> 张运动记忆</span><span>进入空间 <span aria-hidden="true">→</span></span></div>
+          </a>
+        </div>
+      </section>
+
+    <section id="space-view" class="view" hidden aria-labelledby="space-title">
+      <a class="back-link" href="#spaces">← 返回空间选择</a>
+      <div class="collection-header"><div><p class="eyebrow" id="space-eyebrow"></p><h1 id="space-title"></h1><p id="space-description"></p></div><span class="collection-symbol" id="space-symbol" aria-hidden="true">✳</span></div>
+      <div class="collection-toolbar"><span id="collection-total" role="status"></span><div><label id="sort-label" for="sort-order">排列方式</label><select id="sort-order"><option value="newest">从新到旧</option><option value="oldest">从旧到新</option></select><button class="text-button" id="refresh-library" type="button">↻ 刷新</button></div></div>
+      <div id="media-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span class="empty-icon" id="empty-icon" aria-hidden="true">▷</span><p class="eyebrow">A NEW CHAPTER STARTS HERE</p><h2 id="empty-title"></h2><p id="empty-description"></p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="footer-logo" href="#home">w<span>·</span></a><span>好好生活，慢慢记录。<small>MADE FOR MY ORDINARY, LOVELY DAYS.</small></span><span class="footer-year">© <span id="current-year">2026</span> W’S SPACE</span></footer>
+
+  <dialog id="viewer-dialog" class="viewer-dialog" aria-labelledby="viewer-title">
+    <h2 id="viewer-title" class="visually-hidden" data-viewer-title></h2>
+    <button class="viewer-close" data-viewer-close aria-label="关闭媒体预览" type="button" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div class="viewer-stage">
+      <button class="viewer-arrow" data-viewer-previous type="button" aria-label="上一个媒体"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+      <div id="viewer-content" class="viewer-content" data-viewer-content></div>
+      <button class="viewer-arrow" data-viewer-next type="button" aria-label="下一个媒体"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+      <p class="viewer-status" data-viewer-status role="status" hidden></p>
+    </div>
+    <div class="viewer-counter" data-viewer-counter aria-live="polite" aria-atomic="true"></div>
+  </dialog>
+</body>
+</html>
